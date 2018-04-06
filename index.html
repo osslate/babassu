@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Babassu</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="tokenize.js"></script>
+		<script type="text/javascript" src="assembler.js"></script>
+		<script type="text/javascript" src="babassu.js"></script>
+	</head>
+	<body data-theme="dark">
+		<!-- header! -->
+		<header>
+			<!--
+			<h1>Babassu</h1>
+			<p>A microprocessor emulator.</p> -->
+			<nav>
+				<ul>
+					<li id="run"><a href="#">Run</a></li>
+					<li id="step"><a href="#">Step</a></li>
+					<li id="slower"><a href="#">Slower</a></li>
+					<li id="faster"><a href="#">Faster</a></li>
+					<li id="stop"><a href="#">Stop</a></li>
+					<li id="continue"><a href="#">Continue</a></li>
+					<li id="reset-cpu"><a href="#">Reset CPU</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="registers">
+			<table>
+				<tbody>
+					<tr>
+						<th>AL</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+						<th>IP</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+					</tr>
+					<tr>
+						<th>BL</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+						<th>SP</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+					</tr>
+					<tr>
+						<th>CL</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+						<th>SR</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+					</tr>
+					<tr>
+						<th>DL</th>
+						<td>00000000</td>
+						<td>00</td>
+						<td>+000</td>
+						<th></th>
+						<td>   ISOZ</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<!-- main assembly area -->
+		<main>
+			<textarea id="input"></textarea>
+		</main>
+		<section id="status" class="good">
+			<p></p>
+			<button id="assemble">Assemble</button>
+		</section>
+		<!-- devices -->
+		<aside>
+			<!-- RAM -->
+			<section id="ram">
+				<h1>RAM</h1>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>0</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							<th>4</th>
+							<th>5</th>
+							<th>6</th>
+							<th>7</th>
+							<th>8</th>
+							<th>9</th>
+							<th>A</th>
+							<th>B</th>
+							<th>C</th>
+							<th>D</th>
+							<th>E</th>
+							<th>F</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</section>
+			<!-- VDU -->
+			<section>
+				<h1>VDU</h1>
+			</section>
+		</aside>
+	</body>
+</html>

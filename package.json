@@ -1,0 +1,14 @@
+{
+  "name": "babassu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babassu.js",
+  "scripts": {
+    "test": "ava -v"
+  },
+  "author": "Fionn Kelleher <fionnkell@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  }
+}

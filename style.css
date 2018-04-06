@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(./fonts/SourceCodeVariable-Roman.ttf);
+}
+
+* { box-sizing: border-box; }
+
+[data-theme="dark"] {
+    --bg-color: #002b36;
+    --text-color: #93a1a1;
+}
+
+[data-theme="light"] {
+
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: "Source Code Pro", monospace;
+}
+
+body {
+    font-size: 0.7em;
+    background: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 72px auto 26px;
+    grid-template-areas: "registers title"
+                         "devices assembly"
+                         "footer status";
+}
+
+/* define grid areas */
+main { grid-area: assembly; }
+aside { grid-area: devices; }
+#registers { grid-area: registers; }
+#status { grid-area: status; }
+footer {grid-area: footer;}
+header { grid-area: title; }
+
+/* header-area styles */
+header {
+    background: linear-gradient(#000, transparent);
+    height: 100%;
+}
+
+header h1 {
+    padding: 0;
+    margin: 0;
+    text-transform: lowercase;
+}
+
+header p {
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-left: 5px;r
+}
+
+header li {
+    display: inline-block;
+    background: linear-gradient(#C8C8C8, #FFFFFF);
+    border: 1px solid grey;
+    box-shadow: 1px black;
+    width: 74px;
+    height: 30px;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 7px;
+}
+
+header li a {
+
+    text-align: right;
+    padding: 5px;
+}
+
+
+#registers tr {
+    white-space: pre;
+}
+
+#registers.decimal {
+    margin-right: 10px;
+}
+
+
+/* assembly-area styles */
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bg-color);
+    border-top-left-radius: 10px;
+}
+
+main textarea {
+    resize: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    font-family: monospace;
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+/* device-area styles */
+aside {
+    overflow: auto;
+}
+
+#ram {
+    text-transform: uppercase;
+}
+
+#ram table {
+    font-size: 0.9em;
+}
+
+#ram thead {
+    background: black;
+    text-align: right;
+}
+
+#ram tbody tr td:first-child {
+    background: black;
+}
+
+#ram .last-set {
+    background-color: magenta;
+    color: white;
+}
+
+/* dohdiudhnd */
+
+#status {
+    display: grid;
+    grid-template-columns: auto 80px;
+}
+
+#status.good {
+    background-color: green;
+}
+
+#status.bad {
+    background: red;
+}
+
+#status p {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 6px;
+    margin: 0;
+}
+
+#status button {
+    grid-column: 2;
+    grid-row: 1;
+}
