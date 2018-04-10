@@ -9,7 +9,7 @@ This project aims to recreate as much of the Samphire application as possible us
 * [x] Assembly tokenizer/parser
 * [x] Assembler
 * [ ] Working CPU implementation
-* [ ] VDU
+* [x] VDU
 * [ ] Seven segment display
 * [ ] Keyboard input
 * [ ] Traffic lights
